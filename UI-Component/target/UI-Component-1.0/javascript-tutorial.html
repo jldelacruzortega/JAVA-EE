@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <label id="mucha">Los Muchachones</label>
+        <div>TODO write content</div>
+        <script type="text/javascript">
+            var message="Hello Wordl Javascript";
+             alert(message);
+             document.write(message);
+             console.log(message);
+             
+             var names=('Juan', 'Pedro', 'Jose','Maria');
+             var colors= new Array();
+             
+             if(names[0]=='Juan'){
+                 console.log(names[0]);                 
+             }else{
+                 console.log("Wrong answer");
+             }
+             
+             for(var i=0;i<names.length;i++){
+                 console.log(names[i]+"\n");
+                 
+             }
+             
+             console.log("\n")
+             
+             var label= document.getElementById("mucha");
+             console.log(label.innerHTML);
+             label.innerHTML="Los Super Muchachones";
+             
+             displayMessage();
+             document.write(getDate()); 
+             document.write("calculation:: "+ calculate(15+35));
+             
+             document.write(calculateTax(78542));
+             
+             function displayMessage(){
+                 alert("Hello displaying message");
+             }
+             
+             function getDate(){
+                 return new Date()
+             }
+             
+             function calculate(num1, num2){
+                 return num1+num2;
+             }
+             
+             var calculateTax=function(totalOrder) {
+                 return totalOrder * 0.21;
+             };
+             
+        </script>
+    </body>
+</html>
