@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        
+        <section th:fragment="content">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Cedula</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                    <th>Correo</th>
+                    
+                    
+                </tr>
+                
+                <tr>
+                    <td th:text="${paciente.name}">Name</td>
+                    <td th:text="${paciente.apellido}">Apellido</td>
+                    <td th:text="${paciente.edad}">Edad</td>
+                    <td th:text="${paciente.cedula}">Cedula</td>
+                    <td th:text="${paciente.telefono}">Telefono</td>
+                    <td th:text="${paciente.direccion}">Direccion</td>
+                    <td th:text="${paciente.correo}">Correo</td>
+                </tr>
+                
+            </table>
+            
+            <label>Pacientes</label>
+            <select>
+                <option th:each="paciente : ${pacientes}" 
+                        th:text="${paciente.name}" th:value="${paciente.id}"></option>
+            </select>
+            
+            <a th:href="@{/paciente/pathFromHtml(name=${paciente.name})}">Request Param</a>
+            
+        </section>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>    
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/resources/css/bootstrap.min.css}" href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/resources/css/simple-sidebar.css}" href="css/simple-sidebar.css" rel="stylesheet"/>
+    
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{/paciente/crear}" href="#">Crear</a>
+                </li>
+                <li>
+                    <a id="paramPath" href="#">Request Param</a>
+                </li>
+                <li>
+                    <a id="variablePath" href="#">Path Variable</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid" th:replace="${view} :: content">
+                
+            </div>
+            
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script th:src="@{/resources/js/jquery/jquery.min.js}"></script>
+    <script th:src="@{/resources/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/resources/js/pages/product.js}"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+   
+        $("#wrapper").addClass("toggled");
+    </script>
+
+</body>
+
+</html>
